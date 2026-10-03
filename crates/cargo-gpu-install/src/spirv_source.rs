@@ -292,7 +292,7 @@ mod test {
         expect![[r#"
             Git {
                 url: "https://github.com/Rust-GPU/rust-gpu",
-                rev: "877bd8697a15f3e6d09446a5e1807e6237ca1dac",
+                rev: "c49441a4c472098f5b221984f5bea1dbf866ad10",
             }"#]]
         .assert_eq(&format!("{source:#?}"));
     }
@@ -310,7 +310,7 @@ mod test {
             .to_str()
             .map(std::string::ToString::to_string)
             .unwrap();
-        expect!["https___github_com_Rust-GPU_rust-gpu+877bd869"].assert_eq(&name);
+        expect!["https___github_com_Rust-GPU_rust-gpu+c49441a4"].assert_eq(&name);
     }
 
     #[test_log::test]

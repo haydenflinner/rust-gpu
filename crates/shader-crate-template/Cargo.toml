@@ -12,8 +12,7 @@ unexpected_cfgs = { level = "allow", check-cfg = ['cfg(target_arch, values("spir
 # Dependencies for CPU and GPU code
 [dependencies]
 # TODO: use a simple crate version once v0.10.0 is released
-spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "877bd8697a15f3e6d09446a5e1807e6237ca1dac" }
-glam = { version = "0.30.8", default-features = false }
+spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "c49441a4c472098f5b221984f5bea1dbf866ad10" }
 
 [package.metadata.rust-gpu.build]
 # Where to output the compiled shader. Defaults to where `cargo gpu` is called from.
