@@ -1,5 +1,15 @@
 # `#[spirv(vertex)]` with a `Vec4` vertex input silently emits no `OpEntryPoint`
 
+**Update (2026-10-03): already fixed at `main`.** At current `main`
+(`c49441a4`, spirv-std 0.10.0, nightly-2026-07-03 / rustc 1.98) the same
+crate emits `main_vs` correctly and `deferredshadows/shadow.vert.spv` now
+contains a vertex entry point. The bug still reproduces at `877bd86`
+(spirv-std 0.9.0, nightly-2026-03-14) — the rev the archived
+`Rust-GPU/cargo-gpu` release pins, i.e. what users installing the
+published cargo-gpu today actually get. Filing mainly so there's a
+record + in case a regression test is wanted; feel free to close as
+already-fixed.
+
 ## Summary
 
 A `#[spirv(vertex)]` entry point that takes a `glam::Vec4` vertex attribute as
